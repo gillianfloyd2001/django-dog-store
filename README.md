@@ -66,10 +66,15 @@ It has the following fields:
 The application has 6 paths:
 
 - `""` should route to a `home` view
+
 - `"dog-product/<dog_product_id>"` should route to a `dog_product_detail` view
+
 - `"dog-product/<dog_product_id>/purchase"` should route to a `purchase_dog_product` view
+
 - `"purchase/<purchase_id>"` should route to a `purchase_detail` view
+
 - `"dogtag/new"` should route to a `new_dog_tag` view
+
 - `"dogtag"` should route to a `dog_tag_list` view
 
 ## Forms
@@ -85,7 +90,7 @@ have the following fields:
 
 ## Views
 
-### `home`
+### `home` !
 
 This view should render all of the `DogProduct`s using the `home.html`
 template and the context key `dog_products`.
@@ -121,7 +126,7 @@ You can run the following line to only test this view:
 
     python3 manage.py test app.tests.TestDogProductPurchase
 
-### `purchase_detail`
+### `purchase_detail` !
 
 This view should render the `Purchase` identified by the path param using
 the `purchase_detail.html` template and the context key `purchase`.
@@ -130,7 +135,7 @@ You can run the following line to only test this view:
 
     python3 manage.py test app.tests.TestPurchaseDetail
 
-### `new_dog_tag`
+### `new_dog_tag` !
 
 On `GET`, this view should render the `new_dog_template.html` template.
 
@@ -145,7 +150,7 @@ You can run the following line to only test this view:
 
     python3 manage.py test app.tests.TestNewDogTag
 
-### `dog_tag_list`
+### `dog_tag_list` !
 
 This view should render all of the `DogTag`s using the `dog_tag_list.html`
 template and the context key `dog_tags`.
